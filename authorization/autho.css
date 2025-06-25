@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --primery: #5a7d51;
+}
+
+.authorization-body {
+    display: flex;
+    
+}
+
+.left-autho {
+    height: 100%;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-conteiner {
+    height: 100%;
+    width: 50%;
+    background-color: #5a7d51;
+    position: absolute;
+    margin-left: 50%;
+}
+
+h2 {
+    font-size: 36px;
+      text-align: center;
+      color: #5a7d51;
+      margin-bottom: 20px;
+      justify-content: center;
+      margin-left: 50px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#email , 
+#password {
+      width: 120%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      background-color: #5a7d51;
+      outline: none;
+
+}
+
+button {
+      background-color: #5a7d51;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      width: 120%;
+      justify-content: center;
+      
+}
+
+::placeholder {
+    color: white;
+}
+
+h1 {
+    color: white;
+    margin: 80px ;
+}
+
+p{
+    color: white;
+    font-size: 25px;
+    width: 50%;
+    margin-left: 80px;
+}
+
+.terms {
+    display: flex;
+    padding-left: 80px;
+    padding-top: 40px;
+    color: white;
+    gap: 20px;
+}
+
+#check {
+    width: 20px;
+    height: 20px;
+}
+
+.terms label {
+    color: #ffffff;
+}
+
+#warning {
+    margin-top: 60px;
+    margin-left: -280px;
+    font-size: 20px;
+
+}

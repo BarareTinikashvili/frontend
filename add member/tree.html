@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Family Tree</title>
+  <link rel="stylesheet" href="tree.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Family Tree</h1>
+      <a href="../main/index.html"><button class="btn">Back to Home</button></a>
+    </header>
+    <div id="familyTree" class="family-tree"></div>
+  </div>
+
+  <script>
+    const apiUrl = 'http://localhost:3000/members';
+    const familyTreeDiv = document.getElementById('familyTree');
+
+
+    let members = [];
+
+    function fetchMembers() {
+      fetch(apiUrl)
+        .then(res => res.json())
+        .then(data => {
+          members = data;
+          renderFamilyTree(members);
+        })
+        .catch(() => {
+          familyTreeDiv.innerHTML = '<p>Failed to load family tree.</p>';
+        });
+    }
+
+    function renderFamilyTree(members) {
+      familyTreeDiv.innerHTML = '';
+      if (members.length === 0) {
+        familyTreeDiv.innerHTML = '<p>No family members found.</p>';
+        return;
+      }
+
+      const rootMembers = members.filter(m => !m.parentId);
+      const treeHTML = generateTreeHTML(rootMembers);
+      familyTreeDiv.innerHTML = `<div class="tree"><ul>${treeHTML}</ul></div>`;
+    }
+
+    function generateTreeHTML(memberList) {
+      return memberList.map(member => {
+        const children = members.filter(m => m.parentId === member._id);
+        return `
+          <li>
+            <div class="tree-member ${member.isHighlighted ? 'highlight' : ''}">
+              ${member.name}<br>
+              <small>${member.birthYear} - ${member.deathYear || 'Alive'}</small>
+            </div>
+            ${children.length > 0 ? `<ul>${generateTreeHTML(children)}</ul>` : ''}
+          </li>
+        `;
+      }).join('');
+    }
+
+    fetchMembers();
+  </script>
+</body>
+</html>

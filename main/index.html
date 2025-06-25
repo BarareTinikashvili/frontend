@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./indexx.css">
+    <title>FamilyRoots - Your Family Tree Builder</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-icon">🌳</div>
+                    Family<span>Tree</span>
+                </div>
+                <ul class="nav-links">
+                    <!-- <li><a href="#" class="btn" id="myTreeBtn">My Tree</a></li> -->
+                    <a href="/add member/tree.html"><button id="myTreeBtn" class="btn">My Tree</button></a>
+                    <div class="input-group">
+                        <input required="" id="inp" type="text" name="text" autocomplete="off" class="input">
+                        <label class="user-label">First Name</label>
+                      </div>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Family Story</h1>
+            <p>Create beautiful family trees, connect with relatives, and preserve your family legacy for generations to come.</p>
+            <a href="/add member/add.html" class="btn">Start Building your Tree</a>
+        </div>
+    </section>
+    
+    <div class="container">
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Easy Tree Building</h3>
+                <p>Our intuitive tools make creating your family tree simple. Just add names and watch your tree grow.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>DNA Matching</h3>
+                <p>Connect with DNA testing services to find relatives and expand your family connections.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile Friendly</h3>
+                <p>Update your family tree on the go with our mobile app, available on iOS and Android.</p>
+            </div>
+        </section>
+        
+        <section class="tree-demo">
+            <div class="tree-heading">
+                <h2>See How Your Family Tree Will Look</h2>
+                <p>Interactive, beautiful, and easy to navigate - our family trees bring your heritage to life</p>
+            </div>
+            <div class="tree-container">
+                <div class="family-tree">
+                    <div class="tree-row">
+                        <div class="tree-node">
+                            <h4>James Smith</h4>
+                            <p>1922-1998</p>
+                        </div>
+                        <div class="tree-node">
+                            <h4>Mary Smith</h4>
+                            <p>1925-2010</p>
+                        </div>
+                    </div>
+                    <div class="tree-row">
+                        <div class="tree-node">
+                            <h4>Robert Smith</h4>
+                            <p>1950-2015</p>
+                        </div>
+                        <div class="tree-node">
+                            <h4>Sarah Johnson</h4>
+                            <p>1952-Present</p>
+                        </div>
+                    </div>
+                    <div class="tree-row">
+                        <div class="tree-node main">
+                            <h4>Michael Smith</h4>
+                            <p>1980-Present</p>
+                        </div>
+                    </div>
+                    <div class="tree-row">
+                        <div class="tree-node">
+                            <h4>Emma Smith</h4>
+                            <p>2010-Present</p>
+                        </div>
+                        <div class="tree-node">
+                            <h4>Noah Smith</h4>
+                            <p>2013-Present</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I discovered relatives I never knew existed! FamilyRoots has helped me connect with long-lost family members and build a comprehensive family history."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="/api/placeholder/50/50" alt="User avatar">
+                        </div>
+                        <div class="author-info">
+                            <h4>Jennifer Williams</h4>
+                            <p>Member since 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The interface is so easy to use! I was able to create a complete family tree going back 4 generations in just one weekend. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="/api/placeholder/50/50" alt="User avatar">
+                        </div>
+                        <div class="author-info">
+                            <h4>David Chen</h4>
+                            <p>Member since 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="add-comment">
+            <div>
+                <h1 class="comment-title">Add Your Comment Here</h1>
+                <div class="comment">
+                    <input class="write-comment" type="text" placeholder="Write">
+                    <button class="send-comment">SEND</button>
+                </div>
+                <div class="text">
+                    <p class="text-explanation">Hello. Write your opinion on this site, how you liked it and what you would change, we welcome all criticism. Thank you for visiting our site.</p>
+                </div>
+               <div class="profile-container">
+                 <label for="profile-upload" class="profile-pic-label">
+                 <img id="profile-preview" src="" alt="Profile Photo">
+                 </label>
+                 <input type="file" id="profile-upload" accept="image/*">
+                 <p class="upload-text">Upload Photo</p>
+               </div>
+               
+            </div>
+        </section>
+
+        <section class="user-comments">
+    <h2 class="comment-title">User Comments</h2>
+    <div class="comment-list"></div>
+</section>
+
+
+        
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>About FamilyRoots</h3>
+                    <p>FamilyRoots is dedicated to helping people discover, preserve and share their family history. Our platform provides the tools you need to build your family tree and connect with relatives around the world.</p>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">🐦</a>
+                        <a href="#">📸</a>
+                        <a href="#">📱</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="#">Family Tree Builder</a></li>
+                        <li><a href="#">Record Searching</a></li>
+                        <li><a href="#">DNA Matching</a></li>
+                        <li><a href="#">Photo Storage</a></li>
+                        <li><a href="#">Mobile App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Getting Started Guide</a></li>
+                        <li><a href="#">Research Tips</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 FamilyRoots. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>

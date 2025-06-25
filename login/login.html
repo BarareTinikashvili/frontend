@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree Registration</title>
+<link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="left-panel">
+            <div class="left-content" id="leftContent">
+                <div class="heading-container">
+                    <h1>HELLO!</h1>
+                    <p class="welcome-text">welcome to Family Tree, <br>Please register.</p>
+                </div>
+            </div>
+            
+            <div class="arrow" id="arrowBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>  
+        
+        <div id="loginForm" class="right-panel">
+            <div class="form-container">
+                <h2 class="register-title">Register</h2>
+                <input id="name" type="text" placeholder="Enter name">
+                <input type="text" id="last-name" placeholder="Enter your last name">
+                <input id="email" type="email" placeholder="Enter email">
+                <input id="password" type="password" placeholder="Enter password">
+                <input id="age" type="number" placeholder="Enter your age">
+                
+                <div class="checkbox-container">
+                    <div class="custom-checkbox" id="checkbox"></div>
+                    <label>i Agree to Terms and Conditions</label>
+                </div>
+
+                <p id="warning" style="color: red;"></p>
+
+                <button class="submit-btn" id="register-btn" >Submit</button>
+                <p style="padding-top: 20px;">if you already register click here to <a style="font-weight: 700; color:#5a7d51; " href="/authorization/autho.html">authorization</a></p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="./login.js"></script>
+</body>
+</html>

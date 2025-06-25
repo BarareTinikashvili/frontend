@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f5f0;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #4a6741;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.controls {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #4a6741;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #5a7d51;
+}
+
+.tree {
+    display: table;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    display: table;
+    margin: 0 auto;
+}
+
+.tree li {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+    padding: 20px 5px 0 5px;
+    vertical-align: top;
+}
+
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid #8B7D5E; 
+    width: 50%;
+    height: 20px;
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 2px solid #8B7D5E; 
+}
+
+.tree li:only-child::before,
+.tree li:only-child::after {
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+    border: none;
+}
+
+.tree li:last-child::before {
+    border-right: 2px solid #8B7D5E;
+    border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+
+.tree-member {
+    display: inline-block;
+    border: 2px solid #8B7D5E; 
+    background: #e6d7b8; 
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    min-width: 180px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+}
+
+.tree-member.highlight {
+    background-color: #4a6741; 
+    color: white;
+    border-color: #5a7d51;
+}
+
+.tree-member:hover {
+    background-color: #5a7d51;
+    color: white;
+    cursor: pointer;
+}
+
+.action-buttons {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    font-size: 12px;
+    padding: 4px 10px;
+    background-color: #8B7D5E;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    background-color: #6d6349; 
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.save-btn {
+    height: 50px;
+    width: 100px;
+    background-color: #5a7d51;
+    color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    margin-left: 23%;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.save-btn:hover {
+    background-color: #4a6741;
+}
+
+.hidden {
+    display: none;
+}
